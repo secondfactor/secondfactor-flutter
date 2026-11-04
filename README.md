@@ -32,9 +32,27 @@ the key and uses a server library:
 
 ## Install
 
+The plugin is not published to pub.dev. Clone this repository next to your
+app and depend on it by path. It is short enough to read in full, so you can
+also treat it as an example and adapt it.
+
 ```bash
-flutter pub add secondfactor
+# Clone into a directory named `secondfactor`, next to your app.
+git clone https://github.com/secondfactor/secondfactor-flutter.git secondfactor
 ```
+
+Then add it to your app's `pubspec.yaml` and run `flutter pub get`:
+
+```yaml
+dependencies:
+  secondfactor:
+    path: ../secondfactor
+```
+
+Clone into a directory named `secondfactor`, the plugin's own name. Flutter's
+Swift Package Manager integration names the plugin after its directory, and
+Xcode refuses to resolve the package when that name differs. To update, pull
+the clone and run `flutter pub get` again.
 
 ## Set up
 
